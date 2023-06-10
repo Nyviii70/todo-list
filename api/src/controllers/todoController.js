@@ -4,19 +4,19 @@ const models = require('../database/models');
 const getLists = asyncHandler(async (req, res) => {
     try
     {
-        //const lists = await models.Lists.findAll();
+        const lists = await models.Lists.findAll();
 
-        const lists = await models.Lists.findAll({
-            include: [
-              {
-                model: models.Todos,
-                as: "Todos"
-                }
-            ]
-          });
+        // const lists = await models.Lists.findAll({
+        //     include: [
+        //       {
+        //         model: models.Todos,
+        //         as: "Todos"
+        //         }
+        //     ]
+        //   });
         
 
-        return res.status(200).json({ lists} );
+        return res.status(200).json( { lists } );
     }
     catch(error)
     {

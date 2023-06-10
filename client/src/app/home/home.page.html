@@ -5,15 +5,21 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
+  <div></div>
   <div id="container">
     <div id="lists">
       <div color="tertiary" id="my_lists">Mes listes</div>
-      <ion-button (click)="handleCreateTodo()" color="tertiary" size="small">+</ion-button>
+      <ion-button color="tertiary" size="small">+</ion-button>
+      <!-- <ion-button (click)="handleCreateTodo()" color="tertiary" size="small">+</ion-button> -->
     </div>
     <ion-grid>
       <ion-row>
         <ion-col>
+          <!-- TODO
+          add loop to display each list on one line
+          -->
           <ion-button expand="block" color="success"><ion-icon slot="start" name="star"></ion-icon>Courses</ion-button>
+          <!-- <ion-button (click)="handleConsultTodo()" expand="block" color="success"><ion-icon slot="start" name="star"></ion-icon>Courses</ion-button> -->
           <ion-button expand="block" color="tertiary"><ion-icon slot="start" name="star"></ion-icon>Wish list</ion-button>
           <ion-button expand="block" color="medium"><ion-icon slot="start" name="star"></ion-icon>Préparatifs anniversaire</ion-button>
           <ion-button expand="block" color="primary"><ion-icon slot="start" name="star"></ion-icon>Valises</ion-button>
