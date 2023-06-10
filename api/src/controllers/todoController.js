@@ -25,6 +25,19 @@ const getLists = asyncHandler(async (req, res) => {
     }    
 });
 
+const addList = asyncHandler (async (req, res) => {
+    try
+    {
+        const list = await models.Lists.create(req.body);
+        return res.status(201).json( { list });
+    }
+    catch(error)
+    {
+        return res.status(500).json({ error: error.message});
+    }
+});
+
 module.exports = {
-    getLists
+    getLists,
+    addList
 };

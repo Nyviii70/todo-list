@@ -1,9 +1,11 @@
 const express = require('express');
 const router = express.Router();
 const {
-    getLists,
+    getLists, addList,
 } = require('../controllers/todoController');
 
-router.route('/').get(getLists);
+//router.route('/todos').get(getLists).post(addList);
+router.get('/todos',getLists);
+router.post('/todos',addList);
 
 module.exports = router;
