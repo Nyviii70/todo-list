@@ -1,0 +1,70 @@
+<ion-header collapse="fade">
+  <ion-toolbar>
+    <ion-title class="ion-text-center" size="large" color="tertiary">Nouvelle liste</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-card>
+      <ion-textarea placeholder="Titre" [counter]="true" [maxlength]="25"></ion-textarea>
+  </ion-card>
+
+  <ion-card>
+    <ion-grid>
+      <ion-row>
+        <ion-col><ion-button color="primary"></ion-button></ion-col>
+        <ion-col><ion-button color="secondary"></ion-button></ion-col>
+        <ion-col><ion-button color="tertiary"></ion-button></ion-col>
+        <ion-col><ion-button color="success"></ion-button></ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col><ion-button color="danger"></ion-button></ion-col>
+        <ion-col><ion-button color="warning"></ion-button></ion-col>
+        <ion-col><ion-button color="medium"></ion-button></ion-col>
+        <ion-col><ion-button color="dark"></ion-button></ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+
+  <ion-card>
+    <ion-grid>
+      <ion-row>
+        <ion-col><ion-button color="light"><ion-icon size = "large" name="sunny-outline"></ion-icon></ion-button></ion-col>
+        <ion-col><ion-button color="light"><ion-icon size = "large" name="calendar-outline"></ion-icon></ion-button></ion-col>
+        <ion-col><ion-button color="light"><ion-icon size = "large" name="cart-outline"></ion-icon></ion-button></ion-col>
+        <ion-col><ion-button color="light"><ion-icon size = "large" name="list-outline"></ion-icon></ion-button></ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col><ion-button color="light"><ion-icon size = "large" name="car-outline"></ion-icon></ion-button></ion-col>
+        <ion-col><ion-button color="light"><ion-icon size = "large" name="basketball-outline"></ion-icon></ion-button></ion-col>
+        <ion-col><ion-button color="light"><ion-icon size = "large" name="airplane-outline"></ion-icon></ion-button></ion-col>
+        <ion-col><ion-button color="light"><ion-icon size = "large" name="book-outline"></ion-icon></ion-button></ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col><ion-button color="light"><ion-icon size = "large" name="cafe-outline"></ion-icon></ion-button></ion-col>
+        <ion-col><ion-button color="light"><ion-icon size = "large" name="fast-food-outline"></ion-icon></ion-button></ion-col>
+        <ion-col><ion-button color="light"><ion-icon size = "large" name="man-outline"></ion-icon></ion-button></ion-col>
+        <ion-col><ion-button color="light"><ion-icon size = "large" name="sparkles-outline"></ion-icon></ion-button></ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+  
+</ion-content>
+
+<ion-footer class="ion-no-border">
+  <ion-toolbar>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-button (click)="handleReturnToBack()" id="back_button" color="tertiary">
+            <ion-icon name="arrow-back-outline"></ion-icon>
+          </ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button color="tertiary">Enregistrer</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-footer>

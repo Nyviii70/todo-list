@@ -1,0 +1,45 @@
+<ion-header collapse="fade">
+  <ion-toolbar>
+    <ion-title class="ion-text-center" size="large" color="tertiary">Titre todo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content [fullscreen]="true">
+    <ion-grid>
+      <ion-row>
+        <ion-col><ion-checkbox labelPlacement="end">Todo</ion-checkbox></ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col><ion-checkbox labelPlacement="end">Todo</ion-checkbox></ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col><ion-checkbox labelPlacement="end">Todo</ion-checkbox></ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col><ion-checkbox labelPlacement="end">Todo</ion-checkbox></ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col><ion-checkbox labelPlacement="end">Todo</ion-checkbox></ion-col>
+      </ion-row>
+    </ion-grid>
+
+</ion-content>
+
+<ion-footer class="ion-no-border">
+  <ion-toolbar>
+    <ion-grid>
+      <ion-row>
+        <ion-col id="footer_col">
+          <ion-button (click)="handleReturnToBack()"  id="back_button" color="tertiary">
+            <ion-icon name="arrow-back-outline"></ion-icon>
+          </ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button id="back_button" color="tertiary">Ajouter</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-footer>

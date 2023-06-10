@@ -1,0 +1,36 @@
+ion-header {
+    margin-top: 30px;
+    margin-bottom: 100px;
+}
+
+ion-textarea {
+    --color: #5d5c5c;
+    --padding-end: 10px;
+    --padding-start: 10px;
+    --placeholder-color: #5d5c5c;
+    --placeholder-opacity: 0.8;
+  }
+  
+  ion-textarea.custom .helper-text,
+  ion-textarea.custom .counter {
+    color: #5d5c5c;
+  }
+
+ion-card {
+    --background: #e1c5fc;
+    color: #646569;
+}
+
+ion-col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ion-button {
+    height: 32px;
+}
+
+#back_button {
+    height: 32px;
+}

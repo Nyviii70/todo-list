@@ -1,41 +1,7 @@
-# Visual Studio Code Dev Container Tutorial
+# Todo list 
 
 ## Intro
 
-> The **Visual Studio Code Remote - Containers** extension lets you use
-> a Docker container as a full-featured development environment.
-
-It is a hassle to install correct versions of software tools
-and keep them updated during your development.
-By combining **Docker** and **VSCode**, you can drastically improve
-your development experience.
-
-In this tutorial, you will learn how to set up a development environment
-which includes an `express.js` server and a `PostgreSQL` database instance.
-You can use this project as a template and add more Docker containers
-to your environment if needed.
-
-Here are a few Docker images
-that are available on [Docker Hub](https://hub.docker.com/).
-It is up to your creativity how you will combine these containers
-to make something awesome.
-- Web Server
-    - [Apache Web Server](https://hub.docker.com/_/httpd)
-    - [Nginx](https://hub.docker.com/_/nginx)
-- Database
-    - [MySQL](https://hub.docker.com/_/mysql)
-    - [PostgreSQL](https://hub.docker.com/_/postgres)
-    - [MongoDB](https://hub.docker.com/_/mongo)
-    - [Redis](https://hub.docker.com/_/redis)
-    - [Memcached](https://hub.docker.com/_/memcached)
-    - [Couchbase](https://hub.docker.com/_/couchbase)
-- Language / Framework
-    - [Node](https://hub.docker.com/_/node)
-    - [Python](https://hub.docker.com/_/python)
-    - [Java](https://hub.docker.com/_/openjdk)
-    - [Php](https://hub.docker.com/_/php)
-    - [Go](https://hub.docker.com/_/golang)
-    - [Rust](https://hub.docker.com/_/rust)
 
 ---
 
@@ -51,6 +17,20 @@ You can find instructions for installation here:
 
 
 ---
+
+## ORM
+
+https://sequelize.org/docs/v6/
+
+## Database models
+
+
+npx sequelize-cli model:generate --name Icons --attributes name:string
+npx sequelize-cli model:generate --name Colors --attributes name:string
+npx sequelize-cli model:generate --name Lists --attributes title:string,id_color:integer,id_icon:integer
+npx sequelize-cli model:generate --name Todos --attributes id_list:integer,content:string
+
+
 
 ## Let's Begin
 For dev containers to work, you need to write three configuration files:

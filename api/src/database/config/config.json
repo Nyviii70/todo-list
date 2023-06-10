@@ -1,0 +1,9 @@
+{
+  "development": {
+    "username": "vscode",
+    "password": "notsecure",
+    "database": "tutorial",
+    "host": "db",
+    "dialect": "postgres"
+  }  
+}

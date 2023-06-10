@@ -1,0 +1,35 @@
+ion-header{
+    margin-top: 30px;
+}
+
+ion-grid{
+    margin-top: 50px;
+}
+
+ion-checkbox {
+    --size: 32px;
+    --checkbox-background-checked: #cfa2fb;
+  }
+  
+  ion-checkbox::part(container) {
+    border-radius: 15px;
+    border: 2px solid #cfa2fb;
+  }
+
+#add_button {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-right: 25px;
+    padding-bottom: 25px;
+}
+
+#footer_col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#back_button {
+    height: 32px;
+}
