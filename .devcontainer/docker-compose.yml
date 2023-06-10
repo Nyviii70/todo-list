@@ -9,15 +9,26 @@ services:
     app:
         build:
             context: ..
-            dockerfile: .devcontainer/Dockerfile
+            dockerfile: .devcontainer/server.dockerfile
         environment:
             <<: *default-environment
             PORT: 3000
         ports:
             - 3000:3000
         volumes:
-            - ..:/workspace
-        user: vscode
+            - ..:/workspace        
+        command: sleep infinity
+    client:
+        build:
+            context: ..
+            dockerfile: .devcontainer/server.dockerfile
+        environment:
+            <<: *default-environment
+            PORT: 8100
+        ports:
+            - 8100:8100
+        volumes:
+            - ..:/workspace        
         command: sleep infinity
     db:
         image: "postgres:12"
@@ -34,19 +45,5 @@ services:
         environment: *default-environment
         ports:
             - 8080:8080
-    front:
-        build:
-            context: ..
-            dockerfile: .devcontainer/Dockerfile
-        environment:
-            <<: *default-environment
-            PORT: 3001
-        ports:
-            - 3001:3001
-        volumes:
-            - ..:/workspace
-        user: vscode
-        command: sleep infinity
-
 volumes:
     pgdata:
