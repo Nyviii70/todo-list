@@ -1,0 +1,28 @@
+[
+  {
+    "_id": "314a1578-bedf-4fa9-b9d7-e1e35a0cae6e",
+    "colId": "b53bb057-6009-4609-87d0-eacd90f14aef",
+    "containerId": "",
+    "name": "lists",
+    "url": "",
+    "method": "GET",
+    "sortNum": 10000,
+    "created": "2023-06-11T11:19:21.009Z",
+    "modified": "2023-06-11T11:19:21.009Z",
+    "headers": []
+  },
+  {
+    "_id": "6577dce0-fdf0-4c4f-89e6-0b538f24099a",
+    "colId": "b53bb057-6009-4609-87d0-eacd90f14aef",
+    "containerId": "",
+    "name": "list by id",
+    "url": "http://localhost:3000/api/lists/1",
+    "method": "GET",
+    "sortNum": 20000,
+    "created": "2023-06-11T11:24:34.502Z",
+    "modified": "2023-06-11T11:25:04.956Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  }
+]
