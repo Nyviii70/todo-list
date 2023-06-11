@@ -10,6 +10,11 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
+      Lists.hasMany(models.Todos, {
+        foreignKey: 'id_list',
+        as: 'Todos',
+        onDelete: 'CASCADE'
+      });
       Lists.belongsTo(models.Icons, {
         foreignKey: 'id_icon',
         as: 'Icons'
