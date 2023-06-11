@@ -10,13 +10,15 @@ import { response } from 'express';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage implements OnInit {
-  data: any;
+  infos: any;
 
-  constructor(private homeService: HomeService) {}
+  constructor(private homeService: HomeService) {
+
+  }
 
   ngOnInit(): void {
     this.homeService.getData().subscribe((response) => {
-      this.data = response;
+      this.infos = response;
     });
   }
 }
