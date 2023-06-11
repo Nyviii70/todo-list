@@ -8,12 +8,12 @@ ion-grid{
 
 ion-checkbox {
     --size: 32px;
-    --checkbox-background-checked: #cfa2fb;
+    --checkbox-background-checked: #5d5c5c;
   }
   
   ion-checkbox::part(container) {
     border-radius: 15px;
-    border: 2px solid #cfa2fb;
+    border: 2px solid #5d5c5c;
   }
   
 #add_button {
@@ -32,4 +32,9 @@ ion-checkbox {
 
 #back_button {
     height: 32px;
+}
+
+#footer {
+    bottom: 0;
+    position: absolute;
 }

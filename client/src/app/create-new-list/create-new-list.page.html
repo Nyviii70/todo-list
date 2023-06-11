@@ -13,9 +13,6 @@
   <ion-card>
     <ion-grid>
       <ion-row>
-        <!-- TODO
-        bind colors with id_color
-        -->
         <ion-col><ion-button color="primary"></ion-button></ion-col>
         <ion-col><ion-button color="secondary"></ion-button></ion-col>
         <ion-col><ion-button color="tertiary"></ion-button></ion-col>
@@ -58,17 +55,17 @@
   
 </ion-content>
 
-<ion-footer class="ion-no-border">
+<ion-footer id="footer" class="ion-no-border">
   <ion-toolbar>
     <ion-grid>
       <ion-row>
         <ion-col>
-          <ion-button (click)="handleReturnToBack()" id="back_button" color="tertiary">
+          <ion-button id="back_button" color="tertiary">
             <ion-icon name="arrow-back-outline"></ion-icon>
           </ion-button>
         </ion-col>
         <ion-col>
-          <ion-button  (click)="handleAddTodo()" color="tertiary">Enregistrer</ion-button>
+          <ion-button (click)="submitData()" color="tertiary">Enregistrer</ion-button>
         </ion-col>
       </ion-row>
     </ion-grid>

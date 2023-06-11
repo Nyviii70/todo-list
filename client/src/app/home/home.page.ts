@@ -12,10 +12,17 @@ import { response } from 'express';
 export class HomePage implements OnInit {
   data: any;
 
-  constructor(private homeService: HomeService) {
+
+  constructor(private homeService: HomeService, private router: Router) {
 
   }
 
+  handleCreateTodo() {
+    this.router.navigate(["/create-new-list"])
+  }
+  //   handleConsultTodo() {
+  //     this.router.navigate(["/todo-consulting"])
+  //   }
   ngOnInit(): void {
     this.homeService.getData().subscribe((response) => {
       this.data = response.data;
