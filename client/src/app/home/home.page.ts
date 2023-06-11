@@ -10,7 +10,7 @@ import { response } from 'express';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage implements OnInit {
-  infos: any;
+  data: any;
 
   constructor(private homeService: HomeService) {
 
@@ -18,7 +18,7 @@ export class HomePage implements OnInit {
 
   ngOnInit(): void {
     this.homeService.getData().subscribe((response) => {
-      this.infos = response;
+      this.data = response.data;
     });
   }
 }

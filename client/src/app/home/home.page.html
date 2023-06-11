@@ -14,15 +14,9 @@
     </div>
     <ion-grid>
       <ion-row>
-        <ion-col>
-          <!-- TODO
-          add loop to display each list on one line
-          -->
-          <ion-button expand="block" color="success"><ion-icon slot="start" name="star"></ion-icon>Courses</ion-button>
-          <!-- <ion-button (click)="handleConsultTodo()" expand="block" color="success"><ion-icon slot="start" name="star"></ion-icon>Courses</ion-button> -->
-          <ion-button expand="block" color="tertiary"><ion-icon slot="start" name="star"></ion-icon>Wish list</ion-button>
-          <ion-button expand="block" color="medium"><ion-icon slot="start" name="star"></ion-icon>Préparatifs anniversaire</ion-button>
-          <ion-button expand="block" color="primary"><ion-icon slot="start" name="star"></ion-icon>Valises</ion-button>
+        <ion-col *ngFor="let d of data">
+          <ion-button expand="block" color="{{d.Colors.name}}"><ion-icon slot="start" name="{{ d.Icons.name }}"></ion-icon>{{d.title}}</ion-button>
+          
         </ion-col>
       </ion-row>
     </ion-grid>
