@@ -9,6 +9,9 @@
 <ion-content [fullscreen]="true">
     <ion-grid>
       <ion-row>
+        <!-- TODO
+        add loop to display each todo on one line
+        -->
         <ion-col><ion-checkbox labelPlacement="end">Todo</ion-checkbox></ion-col>
       </ion-row>
       <ion-row>
@@ -24,7 +27,21 @@
         <ion-col><ion-checkbox labelPlacement="end">Todo</ion-checkbox></ion-col>
       </ion-row>
     </ion-grid>
-
+    <ion-modal [isOpen]="isModalOpen">
+      <ng-template>
+        <ion-header>
+          <ion-toolbar>
+            <ion-title color="tertiary" >Todo</ion-title>
+            <ion-buttons slot="end">
+              <ion-button color="tertiary" (click)="setOpen(false)">Fermer</ion-button>
+            </ion-buttons>
+          </ion-toolbar>
+        </ion-header>
+        <ion-content class="ion-padding">
+          <ion-textarea placeholder="Votre texte" [counter]="true" [maxlength]="200"></ion-textarea>
+        </ion-content>
+      </ng-template>
+    </ion-modal>
 </ion-content>
 
 <ion-footer class="ion-no-border">
@@ -37,7 +54,7 @@
           </ion-button>
         </ion-col>
         <ion-col>
-          <ion-button id="back_button" color="tertiary">Ajouter</ion-button>
+          <ion-button expand="block" (click)="setOpen(true)" id="back_button" color="tertiary">Ajouter</ion-button>
         </ion-col>
       </ion-row>
     </ion-grid>

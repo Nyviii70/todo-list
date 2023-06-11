@@ -13,6 +13,9 @@
   <ion-card>
     <ion-grid>
       <ion-row>
+        <!-- TODO
+        bind colors with id_color
+        -->
         <ion-col><ion-button color="primary"></ion-button></ion-col>
         <ion-col><ion-button color="secondary"></ion-button></ion-col>
         <ion-col><ion-button color="tertiary"></ion-button></ion-col>
@@ -30,6 +33,9 @@
   <ion-card>
     <ion-grid>
       <ion-row>
+        <!-- TODO
+        bind icons with id_icon
+        -->
         <ion-col><ion-button color="light"><ion-icon size = "large" name="sunny-outline"></ion-icon></ion-button></ion-col>
         <ion-col><ion-button color="light"><ion-icon size = "large" name="calendar-outline"></ion-icon></ion-button></ion-col>
         <ion-col><ion-button color="light"><ion-icon size = "large" name="cart-outline"></ion-icon></ion-button></ion-col>
@@ -62,7 +68,7 @@
           </ion-button>
         </ion-col>
         <ion-col>
-          <ion-button color="tertiary">Enregistrer</ion-button>
+          <ion-button  (click)="handleAddTodo()" color="tertiary">Enregistrer</ion-button>
         </ion-col>
       </ion-row>
     </ion-grid>

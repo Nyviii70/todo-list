@@ -12,6 +12,12 @@ export class CreateNewListPage implements OnInit {
   handleReturnToBack() {
     this.router.navigate(["/home"])
   }
+  // TODO
+  // add function who send the new todo to the database
+  handleAddTodo() {
+    console.log("enregistré")
+    this.router.navigate(["/home"])
+  }
   ngOnInit() {
   }
 
