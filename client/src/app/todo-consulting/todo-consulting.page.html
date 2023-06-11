@@ -1,30 +1,24 @@
-<ion-header collapse="fade">
-  <ion-toolbar>
-    <ion-title class="ion-text-center" size="large" color="tertiary">Titre todo</ion-title>
-  </ion-toolbar>
-</ion-header>
-
+<ng-container *ngIf="data">
+  <ion-header collapse="fade">
+    <ion-toolbar>
+      <ion-title class="ion-text-center" size="large" color="{{ data.Colors.Name }}">
+        <ng-container *ngIf="data">
+          <div>{{ data.title }}</div>
+        </ng-container>
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+</ng-container>
 
 
 <ion-content [fullscreen]="true">
     <ion-grid>
-      <ion-row>
+      <ion-row *ngFor="let d of data.Todos">
+        
         <!-- TODO
         add loop to display each todo on one line
         -->
-        <ion-col><ion-checkbox labelPlacement="end">Todo</ion-checkbox></ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col><ion-checkbox labelPlacement="end">Todo</ion-checkbox></ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col><ion-checkbox labelPlacement="end">Todo</ion-checkbox></ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col><ion-checkbox labelPlacement="end">Todo</ion-checkbox></ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col><ion-checkbox labelPlacement="end">Todo</ion-checkbox></ion-col>
+        <ion-col><ion-checkbox labelPlacement="end">{{d.content}}</ion-checkbox></ion-col>
       </ion-row>
     </ion-grid>
     <ion-modal [isOpen]="isModalOpen">
