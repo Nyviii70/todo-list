@@ -7,6 +7,6 @@ export class HomeService {
   constructor(private http:HttpClient) {}
 
   getData(): Observable<any> {
-    return this.http.get<any>('http://localhost:3000/api/todos');
+    return this.http.get<any>('http://localhost:3000/api/lists');
   }
 }
