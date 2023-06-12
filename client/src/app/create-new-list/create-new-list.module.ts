@@ -8,6 +8,8 @@ import { CreateNewListPageRoutingModule } from './create-new-list-routing.module
 
 import { CreateNewListPage } from './create-new-list.page';
 
+import { CreateService } from '../services/create.service';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -15,6 +17,7 @@ import { CreateNewListPage } from './create-new-list.page';
     IonicModule,
     CreateNewListPageRoutingModule
   ],
+  providers: [CreateService],
   declarations: [CreateNewListPage]
 })
 export class CreateNewListPageModule {}

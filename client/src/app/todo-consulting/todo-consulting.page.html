@@ -13,21 +13,17 @@
 
 <ion-content [fullscreen]="true">
     <ion-grid>
-      <ion-row *ngFor="let d of data.Todos">
-        
-        <!-- TODO
-        add loop to display each todo on one line
-        -->
-        <ion-col><ion-checkbox labelPlacement="end">{{d.content}}</ion-checkbox></ion-col>
+      <ion-row *ngFor="let d of data.Todos; let i = index">
+        <ion-col><ion-checkbox (ionChange)="changeCheckState(d)" [(ngModel)]="d.checked" labelPlacement="end">{{d.content}}</ion-checkbox></ion-col>
       </ion-row>
     </ion-grid>
     <ion-modal [isOpen]="isModalOpen">
       <ng-template>
         <ion-header>
           <ion-toolbar>
-            <ion-title color="tertiary" >Todo</ion-title>
+            <ion-title color="{{ data.Colors.Name }}">Todo</ion-title>
             <ion-buttons slot="end">
-              <ion-button color="tertiary" (click)="setOpen(false)">Fermer</ion-button>
+              <ion-button color="{{ data.Colors.Name }}" (click)="setOpen(false)">Fermer</ion-button>
             </ion-buttons>
           </ion-toolbar>
         </ion-header>
@@ -38,17 +34,17 @@
     </ion-modal>
 </ion-content>
 
-<ion-footer class="ion-no-border">
+<ion-footer id="footer" class="ion-no-border">
   <ion-toolbar>
     <ion-grid>
       <ion-row>
         <ion-col id="footer_col">
-          <ion-button (click)="handleReturnToBack()"  id="back_button" color="tertiary">
+          <ion-button id="back_button" color="{{ data.Colors.Name }}">
             <ion-icon name="arrow-back-outline"></ion-icon>
           </ion-button>
         </ion-col>
         <ion-col>
-          <ion-button expand="block" (click)="setOpen(true)" id="back_button" color="tertiary">Ajouter</ion-button>
+          <ion-button expand="block" (click)="setOpen(true)" id="back_button" color="{{ data.Colors.Name }}">Ajouter</ion-button>
         </ion-col>
       </ion-row>
     </ion-grid>

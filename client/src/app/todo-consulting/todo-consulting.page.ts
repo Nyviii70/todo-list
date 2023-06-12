@@ -9,6 +9,10 @@ import { ListItemsServices } from '../services/todo-consulting.service';
   styleUrls: ['./todo-consulting.page.scss'],
 })
 export class TodoConsultingPage implements OnInit {
+  changeCheckState(ev: any) {
+    console.log('checked: ' + ev.checked);
+  }
+
   isModalOpen = false;
   data: any;
   listTitle: any;
