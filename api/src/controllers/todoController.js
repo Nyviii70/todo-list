@@ -24,6 +24,18 @@ const getLists = asyncHandler(async (req, res) => {
     }    
 });
 
+const getIcons = asyncHandler(async (req, res) => {
+    try
+    {
+        const icons = await models.Icons.findAll();
+        return res.status(200).json({data: icons});
+    }
+    catch(error)
+    {
+        return res.status(500).json({ error: error.message});
+    }    
+});
+
 const getListById = asyncHandler(async (req, res) => {
     try
     {
@@ -56,6 +68,20 @@ const getListById = asyncHandler(async (req, res) => {
         }
 });
 
+const deleteListById = asyncHandler(async (req, res) => {
+    try
+    {
+        const { listId } = req.params;
+        const result = await models.Lists.destroy({where: { id: listId }});
+    
+        return res.status(200).json({ data: listId });
+            
+        }
+        catch(error){
+            return res.status(500).json({ error: error.message });
+        }
+});
+
 const addList = asyncHandler (async (req, res) => {
     try
     {
@@ -68,8 +94,32 @@ const addList = asyncHandler (async (req, res) => {
     }
 });
 
+const getColors = asyncHandler (async (req, res) => {
+    try {
+        const colors = await models.Colors.findAll();
+        return res.status(200).json({ data: colors});
+    }
+    catch(error) {
+        return res.status(500).json({ error: error.message});
+    }
+});
+
+const addTodo = asyncHandler (async (req, res) => {
+    try {
+        const todo = await models.Todos.create(req.body);
+        return res.status(201).json({todo});
+    }
+    catch(error) {
+        return res.status(500).json({ error: error.message});
+    }
+})
+
 module.exports = {
     getLists,
     getListById,
-    addList
+    addList,
+    getIcons,
+    getColors,
+    deleteListById,
+    addTodo,
 };
